@@ -1,0 +1,7 @@
+channels:
+  - conda-forge
+dependencies:
+  - conda-lock
+  - pandas=2.3.3
+  - python=3.13.9
+  - jupyterlab

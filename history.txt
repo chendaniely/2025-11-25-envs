@@ -1,0 +1,30 @@
+  535  conda activate base
+  536  s
+  537  ls
+  538  ls
+  539  cat conda-lock.yml
+  540  ls
+  541  conda --version
+  542  docker pull continuumio/miniconda3:23.9.0-0
+  543  docker run -it continuumio/miniconda3:23.9.0-0
+  544  docker ps -a
+  545  docker ps -a
+  546  docker run -it --rm -v /$(pwd):/home/my_mounted_volume  continuumio/miniconda3:23.9.0-0
+  547  history
+  548  docker run --rm -p 8787:8787 rocker/rstudio:4.4.2
+  549  docker run --rm -p 8765:8787 rocker/rstudio:4.4.2
+  550  docker run --rm -p 8765:8787 -e PASSWORD="asdf" rocker/rstudio:4.4.2
+  551  history
+  552  positron .
+  553  history
+  554  make run
+  555  make run
+  556  make run
+  557  cd ../docker-renv/
+  558  positron .
+  559  make build
+  560  cat ../2025-11-25-envs/Makefile
+  561  ls
+  562  make up
+  563  history ~/Desktop/history.txt
+  564  history > ~/Desktop/history.txt

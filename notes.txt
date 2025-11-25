@@ -1,0 +1,25 @@
+# lock for all platforms including mac + docker support
+
+conda-lock lock --file environment.yml -p linux-64 -p osx-64 -p osx-arm64 -p win-64 -p linux-aarch64
+
+# for docker you need the explit file
+conda-lock -k explicit --file environment.yml -p linux-64 -p linux-aarch64
+
+# use lock file to install
+conda-lock install --name myenv conda-lock.yml
+
+# containers
+docker pull rocker/r-ver:4.3.2
+docker pull rocker/rstudio:4.4.2
+docker pull jupyter/minimal-notebook:notebook-7.0.6
+docker pull jupyter/minimal-notebook
+docker pull rocker/r-ver
+docker pull rocker/rstudio
+docker pull rocker/tidyverse
+docker pull continuumio/miniconda3
+
+# build the container
+docker build -t dockerlock:latest . --no-cache
+
+# run container
+docker run --rm -it dockerlock dockerlockjupyter
